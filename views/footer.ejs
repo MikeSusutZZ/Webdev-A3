@@ -1,0 +1,22 @@
+<div class="pagination">
+    <% if (pageNum > 0) { %>
+      <a class="btn btn-primary" href="/?page=<%= pageNum - 1 %>">Previous</a>
+    <% } %>
+  
+    <% for (let i = Math.max(0, pageNum - 2); i <= Math.min(pageNum + 2, 80); i++) { %>
+      <% if (i === pageNum) { %>
+        <a class="btn btn-primary current-page" href="/?page=<%= i %>"><%= i %></a>
+      <% } else { %>
+        <a class="btn btn-secondary" href="/?page=<%= i %>"><%= i %></a>
+      <% } %>
+    <% } %>
+  
+    <% if (pageNum < 80) { %>
+      <a class="btn btn-primary" href="/?page=<%= pageNum + 1 %>">Next</a>
+    <% } %>
+  </div>
+  
+  
+  
+</body>
+</html>

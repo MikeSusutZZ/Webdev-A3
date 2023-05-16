@@ -1,0 +1,22 @@
+<%- include("header") %>
+<div class="container">
+    <div class="row">
+      <% for (const pokemon of pokemonList) { %>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="pokemon-card">
+            <img src="<%= pokemon.image %>" alt="<%= pokemon.name %>">
+            <p><%= pokemon.name %></p>
+            <a href="/info?num=<%= pokemon.name %>" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      <% } %>
+      <p>10 Pokemon Displayed, 810 Pokemon available</p>
+    </div>
+    
+  </div>
+  
+  
+  
+
+
+  <%- include("footer", {pageNum: page}) %>

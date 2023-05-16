@@ -1,0 +1,9 @@
+<div id="pokemon-container">
+    <% for (const pokemon of pokemonList) { %>
+      <div class="pokemon-card">
+        <img src="<%= pokemon.image %>" alt="<%= pokemon.name %>">
+        <p><%= pokemon.name %></p>
+        <button>Learn More</button>
+      </div>
+    <% } %>
+  </div>
